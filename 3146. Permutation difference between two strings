@@ -1,0 +1,13 @@
+class Solution {
+    public int findPermutationDifference(String s, String t) {
+        int diff=0;
+        char ch;
+        int idx;
+        for(int i=0;i<s.length();i++){
+            ch=s.charAt(i);
+            idx=t.indexOf(ch);
+            diff+=Math.abs(i-idx);
+        }
+        return diff;
+    }
+}
